@@ -1,10 +1,3 @@
-//
-//  main.c
-//  normal-cubemap
-//
-//  Created by Igor on 18/07/2023.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <GLUT/GLUT.h>
