@@ -1,4 +1,4 @@
-# Normal Cubemap
+# Cubemap Demo
 
 Small demo. Made just for fun using really outdated stuff.
 
@@ -27,7 +27,7 @@ cmake --build .
 From the project root:
 
 ```sh
-./bin/normal_cubemap
+./bin/cubemap_demo
 ```
 
 ## License
