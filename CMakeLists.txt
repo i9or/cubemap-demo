@@ -17,16 +17,18 @@ find_package(OpenGL REQUIRED)
 include_directories({GLUT_INCLUDE_DIR} {OPENGL_INCLUDE_DIR})
 
 file(GLOB_RECURSE NM_SOURCES CONFIGURE_DEPENDS src/*.c src/*.h)
+file(GLOB_RECURSE NM_ASSETS CONFIGURE_DEPENDS assets/*.*)
 
 set(NM_META
-	"README.md"
-	"LICENSE"
-	".gitignore"
-	".clang-format")
+  "README.md"
+  "LICENSE"
+  ".gitignore"
+  ".clang-format")
 
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${NM_SOURCES})
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${NM_ASSETS})
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${NM_META})
 
-add_executable(${PROJECT_NAME} ${NM_SOURCES} ${NM_META})
+add_executable(${PROJECT_NAME} ${NM_SOURCES} ${NM_ASSETS} ${NM_META})
 
 target_link_libraries(${PROJECT_NAME} GLUT::GLUT OpenGL::GL)
